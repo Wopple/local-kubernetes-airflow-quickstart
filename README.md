@@ -17,7 +17,7 @@ You can connect to the webserver by:
 1. Run `kubectl -n airflow port-forward svc/airflow-webserver 8080:8080` in a terminal
    - TODO: Fix stability with the port forward connection.
      Sometimes connections fail and you just have to keep retrying.
-2. Navigate your browser to: http://localhost:8080
+2. Navigate your browser to: <http://localhost:8080>
 3. Login with user/pass: `admin`/`admin`
 
 From the UI, you can create the DB connection:
@@ -42,3 +42,12 @@ From the UI, you can create the DB connection:
 # Uninstallation
 
 Run `./uninstall.sh`. It can take a long time for the namespace to be deleted.
+
+# Troubleshooting
+
+If you're having issues when installing/setting it up check for your error message in this section to see if it can be resolved.
+
+<details>
+  <summary>error: no context exists with the name: "docker-desktop"</summary>
+Make sure you have docker-desktop installed and running. Then on the docker-desktop dashboard go to: Settings > Kubernetes > Enable Kubernetes > Apply & Restart
+</details>
